@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* REMOVER SETAS DO INPUT NUMBER */
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+
+/* HEADER */
+
+#cabecalho{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+#cabecalho h1{
+    color: white;
+    font-size: 1.8rem;
+    color: red;
+}
+
+#cabecalho ul{
+    display: flex;  
+    list-style: none;
+    gap: 15px;
+}
+
+
+#cabecalho ul li select{
+    width: 155px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#cabecalho ul li select:focus {
+    outline: none;
+    border-color: #26a1a1;
+}
+
+
+
+/* BOTÃO NOVO ALUNO */
+#adicionarAluno {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, #26a1a1, #1e7c7c);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+#adicionarAluno:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* MODAL */
+#modalCadastro {
+    display: none;
+    width: 500px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);    
+    overflow-y: auto;
+    z-index: 3;
+}
+
+
+
+/* HEADER MODAL */
+#modalCadastro header {
+    background-color: #26a1a1;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+#modalCadastro header button{
+    width: 30px;
+    height: 30px;
+    background-color: #26a1a1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#modalCadastro header button:hover{
+    color: red;
+}
+
+/* CONTEÚDO MODAL */
+
+#container{
+    padding: 2%;
+    color: #5f5f5f;
+}
+
+/* INPUTS MODAL */
+#container input[type="text"]{
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+#input-idade{
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s
+}
+
+#container input:focus {
+    outline: none;
+    border-color: #26a1a1;
+}
+
+/* NOTAS MODAL */
+#notas {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#notas h3 {
+    font-size: 1.2rem;
+}
+
+#notas input[type="number"] {
+    width: 55px;
+    height: 35px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+#notas input[type="number"]:focus {
+    border-color: #26a1a1;
+}
+
+/* ATIVIDADE MODAL */
+#atividade {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#atividade h3 {
+    font-size: 1.2rem;
+}
+
+/* BOTÕES ATIVIDADE */
+#atividade label{
+    display: flex;
+    align-items: center;
+    gap: 5px;   
+    font-size: 1rem;
+}
+
+#atividade label input[type='radio']{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* BOTÃO COMPLETAR */
+#completarCadastro{
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, #26a1a1, #1e7c7c);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
+
+#completarCadastro:hover {
+    transform: scale(1.05);
+}
+
+
+/* TABELA ALUNOS */
+
+#tabela-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+#analiseGeral{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #26a1a1, #1e7c7c);
+    border-bottom: 1px solid white;
+    padding: 1%;
+    color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: linear-gradient(135deg, #26a1a1, #1e7c7c);
+  color: white;
+}
+
+
+thead th {
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tbody td {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #5f5f5f;
+  border-bottom: 1px solid #e6e9ef;
+}
+
+.mediaAluno {
+  position: relative;
+  cursor: pointer;
+}
+
+.alunoNotas {
+  display: none;
+  position: absolute;
+  background: black;
+  color: white;
+  padding: 2%;
+  border-radius: 6px;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.mediaAluno:hover .alunoNotas {
+  display: block;
+}
+
+
+tbody tr:hover {
+  background: #f1f4f8;
+}
+
+tbody td:nth-child(4) {
+  font-weight: bold;
+}
+
+tbody td:last-child {
+  font-weight: bold;
+}

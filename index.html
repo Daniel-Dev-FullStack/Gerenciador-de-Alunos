@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Gerenciador de Alunos</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <!-- CABEÇALHO -->
+    <header id="cabecalho">
+      <button id="adicionarAluno" type="button">Novo Aluno</button>
+      <ul>
+        <li>
+          <select id="filtro-situacao">
+            <option value="todos">Todas Situações</option>
+            <option value="aprovado">Aprovado</option>
+            <option value="reprovado">Reprovado</option>
+          </select>
+        </li>
+   
+        <li>
+       
+          <select id="filtro-atividade">
+            <option value="todos">Todos os Alunos</option>
+            <option value="ativo">Ativo</option>
+            <option value="inativo">Inativo</option>
+          </select>
+        </li>
+      </ul>
+    </header>
+    
+    <!-- MODAL DE CADASTRO -->
+    <form action="" id="modalCadastro">
+      <header>
+        <h2>Adicione os Dados do Aluno</h2>
+        <button type="button">X</button>
+      </header>
+
+      <div id="container">
+        <input id="input-nome" required type="text" pattern="[a-zA-Z\s]+" placeholder="Nome Completo" />
+        <input id="input-turma" required type="text" placeholder="Turma" />
+        <input id="input-idade" type="number" min="0" max="99" maxlength="2" inputmode="numeric" pattern="[0-9]{1,2}" placeholder="Idade">
+
+ 
+        <div id="notas">
+          <h3>Notas:</h3>
+          <input type="number" required placeholder="Nota 1" />
+          <input type="number" required placeholder="Nota 2" />
+          <input type="number" placeholder="Nota 3" />
+        </div>
+
+        <div id="atividade">
+          <h3>Atividade:</h3>
+          <label>
+            <input type="radio" name="atividade" value="ativo">
+            Ativo
+          </label>
+
+          <label>
+            <input type="radio" name="atividade" value="inativo">
+            Inativo
+            </label>
+        </div>
+
+        <button id="completarCadastro" type="submit">Adicionar Aluno</button>
+
+      </div>
+    </form>
+
+    <!-- TABELA DE ALUNOS -->
+    <section id="tabela-container">
+
+      <header id="analiseGeral">
+        <p>Total de Alunos: <span id="totalAlunos">0</span></p>
+        <p>Alunos Aprovados: <span id="alunosAprovados">0</span></p>
+        <p>Alunos Reprovados: <span id="alunosReprovados">0</span></p>
+        <p>Média Geral da Turma: <span id="mediaGeral">0</span></p>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Turma</th>
+            <th>Idade</th>
+            <th>Nota Média</th>
+            <th>Atividade</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- CARREGADOS DINÂMICAMENTE -->
+        </tbody>
+      </table>
+
+      
+
+    </section>
+
+</body>
+</html>
+
+
+    <script src="js/modal.js"></script>
+    <script src="js/alunos.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/filtros.js"></script>
+    <script src="js/analise.js"></script>
+  </body>
+</html>
