@@ -48,24 +48,8 @@ Durante o desenvolvimento do projeto, foram trabalhados os seguintes conceitos:
 
 ---
 
-## 🗂️ Estrutura do Projeto
-
-```text
-📁 projeto
-│
-├── index.html
-│
-├── css/
-│   └── style.css
-│
-└── js/
-    ├── modal.js        # Controle do modal de cadastro
-    ├── alunos.js       # Array principal e renderização da tabela
-    ├── formulario.js   # Cadastro e validação dos alunos
-    ├── filtros.js      # Filtros visuais da tabela
-    └── analise.js      # Análise geral e estatísticas da turma
-```
-
 ## 👁️ Vizualizar Projeto
+
+https://daniel-dev-fullstack.github.io/Gerenciador-de-Alunos/
 
 
