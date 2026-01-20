@@ -30,7 +30,7 @@ modal.addEventListener("submit", (e) => {
       atividade: atividadeSelecionada,
     });
   } else {
-    console.log(`Elemento ${nome} já existe. Não adicionado.`);
+    alert(`Elemento ${nome} já existe. Não adicionado.`);
   }
 
   adicionarAlunosNaLista();

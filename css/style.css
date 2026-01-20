@@ -225,22 +225,23 @@ input[type=number] {
 
 
 /* TABELA ALUNOS */
-
 #tabela-container {
   background: white;
   border-radius: 12px;
   padding: 2%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
+  max-height: 450px;  
+  overflow-y: auto;   
+}   
 
 #analiseGeral{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(135deg, #26a1a1, #1e7c7c);
-    border-bottom: 1px solid white;
-    padding: 1%;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #26a1a1, #1e7c7c);
+  border-bottom: 1px solid white;
+  padding: 1%;
+  color: white;
 }
 
 table {
@@ -298,4 +299,33 @@ tbody td:nth-child(4) {
 
 tbody td:last-child {
   font-weight: bold;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+    #modalCadastro {
+        width: 90%;
+    }
+
+    #cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #cabecalho ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #cabecalho ul li select{
+        width: 100%;
+        height: 50px;
+    }
+
+    #adicionarAluno {
+        width: 100%;
+    }
 }
